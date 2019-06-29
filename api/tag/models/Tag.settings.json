@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "tags",
+  "info": {
+    "name": "tag",
+    "description": "Tags for posts. Used to categorize and group different posts."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "posts": {
+      "collection": "post",
+      "dominant": true,
+      "via": "tags"
+    }
+  }
+}
