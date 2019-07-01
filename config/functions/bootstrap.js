@@ -1,6 +1,6 @@
 'use strict';
 
-if(process.env.DATABASE_HOST == 'localhost') {
+if(!process.env.NODE_ENV) {
   require('dotenv').config()
 }
 
