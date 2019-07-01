@@ -1,6 +1,8 @@
 'use strict';
 
-require('dotenv').config()
+if(process.env.DATABASE_HOST == 'localhost') {
+  require('dotenv').config()
+}
 
 /**
  * An asynchronous bootstrap function that runs before
